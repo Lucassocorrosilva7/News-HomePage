@@ -165,6 +165,10 @@ hr {
   font-weight: 700;
 }
 
+.web{
+  display: none;
+}
+
 .card {
   margin: 1rem;
   background-color: var(--Verydarkblue);
@@ -203,6 +207,7 @@ hr {
   margin-bottom: 4rem;
 }
 
+
 .item-number {
   display: block;
   font-size: 3rem;
@@ -222,6 +227,14 @@ hr {
   .hero {
     grid-column: 2 span;
     margin: 0;
+  }
+
+  .mobile{
+    display: none;
+  }
+
+  .web{
+    display: block;
   }
 
   .hero-texts {
