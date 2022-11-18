@@ -40,9 +40,7 @@ a {
   text-decoration: none;
 }
 
-hr {
-  color: var(--Grayishblue);
-}
+
 
 .nav {
   max-width: 110rem;
@@ -77,6 +75,7 @@ hr {
   width: 80%;
   max-width: 35rem;
   transition: all ease 0.3s;
+  margin-left: 5rem;
 }
 
 .nav-items a {
@@ -117,21 +116,17 @@ hr {
 
   .nav-items {
     position: static;
-    display: flex;
-    align-items: center;
     height: auto;
     flex-direction: row;
-    justify-content: center;
     margin: 1rem;
     font-size: 1.5rem;
-    gap: 3rem;
-    padding: 1rem 0;
     font-weight: 700;
   }
 
   .nav-items a {
     color: var(--Darkgrayishblue);
     margin-bottom: 0;
+    margin-right: 2rem;
   }
 }
 
@@ -146,7 +141,13 @@ hr {
 
 .hero h1 {
   font-size: 5rem;
-  width: 30rem;
+  width: 35rem;
+}
+
+.hero-text{
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
 }
 
 .hero-text p {
@@ -155,7 +156,7 @@ hr {
   margin-bottom: 2rem;
 }
 
-.hero button {
+.hero-text button {
   background-color: var(--Softred);
   color: var(--Off-white);
   padding: 1.4rem 4rem;
@@ -163,33 +164,38 @@ hr {
   text-transform: uppercase;
   margin-bottom: 4rem;
   font-weight: 700;
+  align-self: start;
 }
-
-.web{
-  display: none;
-}
-
 .card {
   margin: 1rem;
   background-color: var(--Verydarkblue);
   padding: 2rem;
 }
 
+
 .card h2 {
   color: var(--Softorange);
   margin-bottom: 2rem;
-  font-size: 3rem;
+  font-size: 3.4rem;
+}
+
+.card .hr {
+  width: 100%;
+  border: 1px solid var(--Grayishblue);
+
 }
 
 .card h3 {
+  font-size: 2rem;
   color: var(--Off-white);
-  margin-top: 2rem;
+  margin-top: 2.2rem;
   margin-bottom: 1rem;
 }
 
 .card p {
   color: var(--Grayishblue);
   margin-bottom: 4rem;
+  line-height: 2;
 }
 
 .items {
@@ -207,13 +213,26 @@ hr {
   margin-bottom: 4rem;
 }
 
-
 .item-number {
   display: block;
   font-size: 3rem;
   color: var(--Grayishblue);
   font-weight: 700;
   margin-bottom: 1rem;
+}
+
+.web {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .web {
+    display: block;
+  }
+
+  .mobile {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -229,12 +248,14 @@ hr {
     margin: 0;
   }
 
-  .mobile{
-    display: none;
-  }
+    .hero h1 {
+      font-size: 5rem;
+      width: 30rem;
+    }
 
-  .web{
-    display: block;
+  .mobile {
+    display: none;
+    background-color: red;
   }
 
   .hero-texts {
